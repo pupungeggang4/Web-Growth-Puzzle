@@ -1,0 +1,22 @@
+{
+  "name": "growth-puzzle",
+  "version": "1.0.0",
+  "description": "Simple sokoban-like puzzle game.",
+  "main": "game/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pupungeggang4/Web-Growth-Puzzle.git"
+  },
+  "keywords": [
+    "puzzle"
+  ],
+  "author": "pupungeggang4",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/pupungeggang4/Web-Growth-Puzzle/issues"
+  },
+  "homepage": "https://github.com/pupungeggang4/Web-Growth-Puzzle#readme"
+}
