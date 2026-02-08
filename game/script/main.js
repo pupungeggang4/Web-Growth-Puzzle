@@ -1,22 +1,22 @@
-window.onload = main
+window.addEventListener("DOMContentLoaded", main)
 window.onerror = errorHandle
-window.oncontextmenu = rightClick
 
 let game
 
 function main() {
+    const canvas = document.getElementById('screen')
+    if (canvas)
+        canvas.oncontextmenu = e => e.preventDefault()
     AssetLoader.loadAssets(() => {
-        game = new Game()
-        game.run()
+        queueMicrotask(() => {
+            game = new Game()
+            game.run()
+        })
     })
 }
 
-function errorHandle(err, url, line, col, obj) {
-    if (obj != null) {
+function errorHandle(msg, url, line, col, err) {
+    if (game?.gameLoop) {
         cancelAnimationFrame(game.gameLoop)
     }
-}
-
-function rightClick() {
-    return false
 }
